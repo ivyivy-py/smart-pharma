@@ -1,0 +1,5 @@
+name = "smart-pharma"
+pages_build_output_dir = "."
+
+[vars]
+account_id = "27243a46c88e87ba36b2858775dbc0a3"
