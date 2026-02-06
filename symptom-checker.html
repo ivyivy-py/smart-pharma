@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom Checker - Smart-Pharma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Smart-Pharma</a></h1>
+        <nav>
+            <a href="index.html#teleconsultation">Teleconsultation</a>
+            <a href="index.html#pharmacy">Pharmacy</a>
+            <a href="#" class="login-btn">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="symptom-checker-form">
+            <h2>Symptom Checker</h2>
+            <p>Please select your primary symptom from the list below.</p>
+            <form>
+                <div class="form-group">
+                    <label for="symptom">Select a symptom:</label>
+                    <select id="symptom" name="symptom">
+                        <option value="cold">Cold</option>
+                        <option value="covid">COVID-19</option>
+                        <option value="sprain">Sprain</option>
+                        <option value="headache">Headache</option>
+                        <option value="stomach-ache">Stomach Ache</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Check Symptoms</button>
+            </form>
+        </section>
+
+        <section id="diagnosis-result" class="hidden">
+            <h2>Diagnosis</h2>
+            <div id="result-content"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Smart-Pharma. All rights reserved.</p>
+    </footer>
+
+    <script src="symptom-checker.js" type="module"></script>
+</body>
+</html>

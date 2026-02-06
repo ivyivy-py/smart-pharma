@@ -1,0 +1,11 @@
+
+# API configuration
+config.js
+
+# Node dependencies
+node_modules
+
+# IDE-specific files
+.idea
+.vscode
+.idx

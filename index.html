@@ -1,14 +1,100 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart-Pharma</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <header>
+        <h1><a href="index.html">Smart-Pharma</a></h1>
+        <nav>
+            <a href="symptom-checker.html">Symptom Checker</a>
+            <a href="#teleconsultation">Teleconsultation</a>
+            <a href="#pharmacy">Pharmacy</a>
+            <a href="#" class="login-btn">Login</a>
+            <a href="#" class="logout-btn hidden">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div id="hero-image-container">
+                <img id="hero-image" src="" alt="Medical professional">
+            </div>
+            <div id="hero-text">
+                <h2>Instant Medical Diagnosis, Right at Your Fingertips.</h2>
+                <p>Get diagnosed, consult with doctors, and have your medicine delivered, all from the comfort of your home.</p>
+            </div>
+        </section>
+
+        <section id="services">
+            <a href="symptom-checker.html" style="text-decoration: none;">
+                <service-card title="Symptom Checker" description="An interactive tool to help you understand your symptoms." icon="🩺"></service-card>
+            </a>
+            <service-card title="Teleconsultation" description="Schedule a video call with a certified doctor." icon="👨‍⚕️"></service-card>
+            <service-card title="Online Pharmacy" description="Order over-the-counter and prescription medicines." icon="💊"></service-card>
+            <service-card title="Medicine Delivery" description="Fast and reliable delivery of your medicines." icon="🚚"></service-card>
+        </section>
+
+        <section id="reviews">
+            <h2>What Our Users Are Saying</h2>
+            <div class="review-container">
+                <review-card user="Sarah L." rating="5" comment="The symptom checker was so accurate! It helped me figure out I just had a common cold and saved me a trip to the doctor."></review-card>
+                <review-card user="John D." rating="5" comment="Booking a teleconsultation was incredibly easy. The doctor was professional and the prescription was delivered to my doorstep within hours."></review-card>
+                <review-card user="Emily W." rating="5" comment="I love the convenience of the online pharmacy. I can order my regular medications and get them delivered without any hassle."></review-card>
+            </div>
+        </section>
+
+        <section id="partners">
+            <h2>Our Trusted Partners</h2>
+            <div class="partner-container">
+                <div class="partner-region">
+                    <h3>Singapore</h3>
+                    <div class="partner-logos">
+                        <partner-logo name="Raffles Medical Group" logo="https://www.rafflesmedicalgroup.com/wp-content/uploads/2022/12/Raffles-Medical-Group-Logo-FA-No-Tagline.png"></partner-logo>
+                        <partner-logo name="Parkway Pantai" logo="https://www.parkwaypantai.com/images/default-source/default-album/logo.png?sfvrsn=a992576_2"></partner-logo>
+                        <partner-logo name="Fullerton Health" logo="https://www.fullertonhealth.com/wp-content/uploads/2021/04/logo.png"></partner-logo>
+                    </div>
+                </div>
+                <div class="partner-region">
+                    <h3>International</h3>
+                    <div class="partner-logos">
+                        <partner-logo name="Mayo Clinic" logo="https://www.mayoclinic.org/assets/images/mc-logo-blue-2x.png"></partner-logo>
+                        <partner-logo name="Cleveland Clinic" logo="https://my.clevelandclinic.org/-/scassets/images/org/global/header/logo-cleveland-clinic.ashx"></partner-logo>
+                         <partner-logo name="Bupa" logo="https://www.bupa.com.sg/-/media/project/bupa/shared-assets/logos/bupa-logo-primary-blue-rgb.svg?h=120&w=120&la=en-SG&hash=792A726359518A23204963567D00B4EA"></partner-logo>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="login-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Smart-Pharma. All rights reserved.</p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="main.js" type="module"></script>
 </body>
 </html>
