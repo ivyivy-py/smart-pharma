@@ -20,18 +20,122 @@
     <main>
         <section id="symptom-checker-form">
             <h2>Symptom Checker</h2>
-            <p>Please select your primary symptom from the list below.</p>
-            <form>
+            <p>Please provide your information and select your symptoms from the list below.</p>
+            <form id="symptom-form">
                 <div class="form-group">
-                    <label for="symptom">Select a symptom:</label>
-                    <select id="symptom" name="symptom">
-                        <option value="cold">Cold</option>
-                        <option value="covid">COVID-19</option>
-                        <option value="sprain">Sprain</option>
-                        <option value="headache">Headache</option>
-                        <option value="stomach-ache">Stomach Ache</option>
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+                <div class="form-group">
+                    <label for="sex">Sex:</label>
+                    <select id="sex" name="sex" required>
+                        <option value="">Select...</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
                     </select>
                 </div>
+
+                <div class="form-group" id="symptoms-group">
+                    <label>Select your symptoms:</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="symptom-fever" name="symptoms" value="fever">
+                        <label for="symptom-fever">Fever</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="symptom-running-nose" name="symptoms" value="running-nose">
+                        <label for="symptom-running-nose">Running Nose</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="symptom-cough" name="symptoms" value="cough">
+                        <label for="symptom-cough">Cough</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="symptom-sore-throat" name="symptoms" value="sore-throat">
+                        <label for="symptom-sore-throat">Sore Throat</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="symptom-stomach-ache" name="symptoms" value="stomach-ache">
+                        <label for="symptom-stomach-ache">Stomach Ache</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="symptom-sprain" name="symptoms" value="sprain">
+                        <label for="symptom-sprain">Sprain</label>
+                    </div>
+                </div>
+
+                <div id="fever-questions" class="hidden">
+                    <div class="form-group">
+                        <label for="temperature">Body Temperature (°C):</label>
+                        <input type="number" id="temperature" name="temperature" step="0.1">
+                    </div>
+                </div>
+
+                <div id="running-nose-questions" class="hidden">
+                    <div class="form-group">
+                        <label for="mucus-type">Mucus Type:</label>
+                        <select id="mucus-type" name="mucus-type">
+                            <option value="clear">Clear</option>
+                            <option value="thick-opaque">Thick and Opaque</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="cough-questions" class="hidden">
+                    <div class="form-group">
+                        <label for="cough-type">Cough Type:</label>
+                        <select id="cough-type" name="cough-type">
+                            <option value="dry">Dry</option>
+                            <option value="wet">Wet</option>
+                            <option value="blood">With Blood</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="stomach-ache-questions" class="hidden">
+                    <div class="form-group">
+                        <label>Do you have diarrhea?</label>
+                        <input type="radio" id="diarrhea-yes" name="diarrhea" value="yes">
+                        <label for="diarrhea-yes">Yes</label>
+                        <input type="radio" id="diarrhea-no" name="diarrhea" value="no" checked>
+                        <label for="diarrhea-no">No</label>
+                    </div>
+                    <div class="form-group">
+                        <label>Is there any bleeding?</label>
+                        <input type="radio" id="bleeding-yes" name="bleeding" value="yes">
+                        <label for="bleeding-yes">Yes</label>
+                        <input type="radio" id="bleeding-no" name="bleeding" value="no" checked>
+                        <label for="bleeding-no">No</label>
+                    </div>
+                    <div class="form-group">
+                        <label>Is there noise from your stomach?</label>
+                        <input type="radio" id="stomach-noise-yes" name="stomach-noise" value="yes">
+                        <label for="stomach-noise-yes">Yes</label>
+                        <input type="radio" id="stomach-noise-no" name="stomach-noise" value="no" checked>
+                        <label for="stomach-noise-no">No</label>
+                    </div>
+                </div>
+
+                <div id="sprain-questions" class="hidden">
+                    <div class="form-group">
+                        <label for="sprain-photo">Upload a photo of the sprain:</label>
+                        <input type="file" id="sprain-photo" name="sprain-photo" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label>Are you able to walk?</label>
+                        <input type="radio" id="walk-yes" name="walk" value="yes">
+                        <label for="walk-yes">Yes</label>
+                        <input type="radio" id="walk-no" name="walk" value="no" checked>
+                        <label for="walk-no">No</label>
+                    </div>
+                    <div class="form-group">
+                        <label>Are you able to use the injured body part?</label>
+                        <input type="radio" id="use-injured-part-yes" name="use-injured-part" value="yes">
+                        <label for="use-injured-part-yes">Yes</label>
+                        <input type="radio" id="use-injured-part-no" name="use-injured-part" value="no" checked>
+                        <label for="use-injured-part-no">No</label>
+                    </div>
+                </div>
+
                 <button type="submit" class="btn-primary">Check Symptoms</button>
             </form>
         </section>
